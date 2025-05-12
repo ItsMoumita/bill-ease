@@ -12,6 +12,7 @@ import Bills from '../Pages/Bills';
 import Private from '../Provider/Private';
 import BillsDetails from '../Pages/BillsDetails';
 import Error from '../Pages/Error';
+import AboutPage from '../Pages/AboutPage';
 
 const router = createBrowserRouter([
   {
@@ -24,8 +25,16 @@ const router = createBrowserRouter([
             Component: Home
         },
         {
+          path: "/about",
+          Component: AboutPage
+        },
+        {
           path: "/organizer/:id",
-          Component: OrganizerDetails
+          Component: () => (
+            <Private>
+              <OrganizerDetails />
+            </Private>
+          ),
         },
         {
           path: "/login",
