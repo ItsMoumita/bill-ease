@@ -13,6 +13,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
+import Loading from "../Components/Loading";
 
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
@@ -49,6 +50,11 @@ const AuthProvider = ({ children }) => {
       unsubscribe();
     };
   }, []);
+
+  if (loading) {
+    return <Loading></Loading> // Show a loading indicator while checking auth state
+  }
+
   const googleProvider = new GoogleAuthProvider();
 
 const googleSignIn = () => {

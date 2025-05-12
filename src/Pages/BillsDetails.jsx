@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 
 // Import necessary icons from react-icons
 import { FaBolt, FaBurn, FaWifi, FaTint, FaCreditCard, FaBookOpen, FaMobileAlt, FaTv } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const iconMap = {
   electricity: FaBolt,
@@ -20,7 +21,7 @@ const iconMap = {
 const BillsDetails = () => {
   const bill = useLoaderData();
   const { balance, setBalance } = useContext(AuthContext);
-  console.log(bill);
+  const navigate = useNavigate();
 
   // Get the relevant icon from iconMap
   const TypeIcon = iconMap[bill.bill_type?.toLowerCase()];
@@ -29,6 +30,7 @@ const BillsDetails = () => {
     if (balance >= bill.amount) {
       setBalance(balance - bill.amount);
       toast.success('Bill paid successfully!');
+      navigate('/bills', { state: { paidBillId: bill.id } });
     } else {
       toast.error('Insufficient balance to pay the bill.');
     }
@@ -36,6 +38,9 @@ const BillsDetails = () => {
 
   return (
     <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col justify-center bg-gradient-to-r from-blue-500 to-cyan-500  min-h-[71vh] px-4 ">
+         <Helmet>
+                        <title>BillEase | Bills-details </title>
+                    </Helmet>
 
         <div className="w-full max-w-4xl  mx-auto my-10 flex flex-col md:flex-row items-center  md:items-start gap-10 bg-white p-6 md:py-18 rounded-xl shadow-md">
       

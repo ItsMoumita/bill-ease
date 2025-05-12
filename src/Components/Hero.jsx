@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div className="relative w-11/12 mx-auto mt-10">
       {/* Text Overlay Centered */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10 px-4">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10 px-4" data-aos="fade-up">
         <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
           Welcome to <span className="md:text-6xl animated-gradient">BillEase</span>
         </h1>
@@ -31,6 +31,7 @@ const Hero = () => {
         showStatus={false}
         dynamicHeight={false}
         className="rounded-2xl shadow-lg overflow-hidden"
+        data-aos="zoom-in"
       >
         <div className="h-[80vh]">
           <img

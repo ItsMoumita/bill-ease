@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 import { FaEdit } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const Profile = () => {
     const { user, updateUser } = useContext(AuthContext);
@@ -29,6 +30,9 @@ const Profile = () => {
 
     return (
         <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col bg-gradient-to-r from-blue-500 to-cyan-500  min-h-[71vh]">
+             <Helmet>
+                            <title>BillEase | {user.displayName} </title>
+                        </Helmet>
             <div className=" flex-grow flex items-center justify-center px-4 ">
                 <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-xl">
                     <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">My Profile</h2>

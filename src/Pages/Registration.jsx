@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Registration = () => {
     const navigate = useNavigate();
@@ -55,6 +56,9 @@ const Registration = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-300 px-4 mt-12">
+             <Helmet>
+                            <title>BillEase | Registration </title>
+                        </Helmet>
             <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
                 <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">Register</h2>
                 <form onSubmit={handleRegister} className="space-y-4">
