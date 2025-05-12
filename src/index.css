@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+input::placeholder {
+  color: grey;
+  font-size: small;
+}
+
+input {
+  color: gray;
+  /* outline: none; */
+}
+
+/* input:focus {
+  outline: 1px solid blue;
+} */

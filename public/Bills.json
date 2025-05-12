@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "bill_type": "electricity",
+    "icon": "https://play-lh.googleusercontent.com/6SONPi2ntkdffBNkxTLlmW8cw4XBcqUYbuNUJKSS4oLE3Au44FtfGK9ijDHjAh53lg",
+    "organization": "DESCO",
+    "amount": 1890,
+    "due-date": "2025-03-22T06:57:58.110Z",
+    "account_number": "DES-903221",
+    "description": "DESCO provides reliable and uninterrupted electricity to the Dhaka metropolitan area, ensuring residential and commercial needs are met with efficiency. This bill includes consumption for the month of March and any applicable taxes and fees.",
+    "services": ["Residential Power Supply", "Load Management", "Smart Metering"]
+  },
+  {
+    "id": 2,
+    "bill_type": "gas",
+    "icon": "https://upload.wikimedia.org/wikipedia/en/6/61/Titas_Gas_logo.png",
+    "organization": "Tista Gas Ltd.",
+    "amount": 1488,
+    "due-date": "2025-03-28T06:57:58.110Z",
+    "account_number": "TITAS-112344",
+    "description": "Monthly bill for residential gas consumption. Tista Gas provides natural gas for cooking and heating to thousands of households in urban and suburban areas.",
+    "services": ["Household Gas Supply", "Industrial Gas Connection", "Leak Detection Support"]
+  },
+  {
+    "id": 3,
+    "bill_type": "internet",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlfgXCB-tTcBcB7Xx5JWE0vPl9AHd2gVJYOQ&s",
+    "organization": "Banglalion",
+    "amount": 1200,
+    "due-date": "2025-04-05T06:57:58.110Z",
+    "account_number": "BNG-876543",
+    "description": "Broadband internet service with up to 10 Mbps speed and unlimited data usage. This plan includes seamless connectivity with 24/7 support.",
+    "services": ["Wireless Broadband", "24/7 Customer Care", "Data Packages"]
+  },
+  {
+    "id": 4,
+    "bill_type": "water",
+    "icon": "https://lh5.googleusercontent.com/proxy/9--THIcE1Bx5kBZQvPIhQNRtD7Vbah4lyJoUCcKIMNZ44dJPKSrIvzFo2w22IxacP-wc9D82Oc0-9TB-Kd5OQw",
+    "organization": "WASA",
+    "amount": 875,
+    "due-date": "2025-03-25T06:57:58.110Z",
+    "account_number": "WASA-443322",
+    "description": "Water bill for March based on metered usage. WASA ensures clean and safe drinking water to residential, industrial, and commercial zones.",
+    "services": ["Water Distribution", "Sewage Services", "Water Quality Testing"]
+  },
+  {
+    "id": 5,
+    "bill_type": "credit card bill",
+    "icon": "https://seeklogo.com/images/D/dutch-bangla-bank-ltd-logo-96BD5A58D8-seeklogo.com.png",
+    "organization": "DBBL",
+    "amount": 5600,
+    "due-date": "2025-03-30T06:57:58.110Z",
+    "account_number": "DBBL-55667788",
+    "description": "Credit card bill for March 2025, including monthly transactions, service charges, and minimum due amount. Ensure payment to avoid interest accumulation.",
+    "services": ["Credit Card Services", "Online Banking", "Loan EMI Payments"]
+  },
+  {
+    "id": 6,
+    "bill_type": "tuition",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc1Mb12UAmQYEBenvcLfa-NCX131m04_zsbg&s",
+    "organization": "Dhaka International School",
+    "amount": 8500,
+    "due-date": "2025-04-10T06:57:58.110Z",
+    "account_number": "DIS-002145",
+    "description": "Monthly tuition fee for Grade 9, covering academic classes, lab use, library access, and extracurricular activities throughout the month of April.",
+    "services": ["Classroom Learning", "Lab Facilities", "Student Counseling"]
+  },
+  {
+    "id": 7,
+    "bill_type": "mobile",
+    "icon": "https://seeklogo.com/images/G/grameenphone-logo-6C1403D0AB-seeklogo.com.png",
+    "organization": "Grameenphone",
+    "amount": 530,
+    "due-date": "2025-03-20T06:57:58.110Z",
+    "account_number": "GP-459812",
+    "description": "Monthly postpaid mobile plan covering local and international calls, SMS packages, and data usage. Includes added VAT and network service fee.",
+    "services": ["Voice & Data Plans", "SIM Replacement", "International Roaming"]
+  },
+  {
+    "id": 8,
+    "bill_type": "internet",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTK7IGjM-Pv8j61S1ymnTRn-iz2Ev-K3M23A&s",
+    "organization": "Link3 Technologies",
+    "amount": 1450,
+    "due-date": "2025-04-02T06:57:58.110Z",
+    "account_number": "LNK3-777888",
+    "description": "20 Mbps unlimited internet service for residential users with free installation and router maintenance. Includes peak-hour priority bandwidth.",
+    "services": ["Broadband", "Corporate Connections", "VoIP Services"]
+  },
+  {
+    "id": 9,
+    "bill_type": "cable tv",
+    "icon": "https://cdnhost.akashbd.net/assets/images/akash-facebook-banner.jpg?v=8.3.2",
+    "organization": "Akash DTH",
+    "amount": 750,
+    "due-date": "2025-03-18T06:57:58.110Z",
+    "account_number": "AKSH-330012",
+    "description": "Monthly cable subscription including access to 100+ HD channels, regional content, and sports networks. Supports parental controls and recording features.",
+    "services": ["HD TV Channels", "Set-top Box Support", "Parental Controls"]
+  },
+  {
+    "id": 10,
+    "bill_type": "electricity",
+    "icon": "https://billonweb.bpdb.gov.bd/assets/images/BPDB_logo.png",
+    "organization": "BPDB",
+    "amount": 1680,
+    "due-date": "2025-04-01T06:57:58.110Z",
+    "account_number": "BPDB-222000",
+    "description": "Electricity usage charges for March including base tariff, fuel adjustment charges, and meter rent for residential customers in rural areas.",
+    "services": ["Rural Electrification", "Tariff Info", "Complaint Resolution"]
+  },
+  {
+    "id": 11,
+    "bill_type": "gas",
+    "icon": "https://www.tbsnews.net/sites/default/files/styles/author/public/organization/logo/bakhrabad-gas-system-ltd.jpg",
+    "organization": "Bakhrabad Gas",
+    "amount": 1520,
+    "due-date": "2025-04-06T06:57:58.110Z",
+    "account_number": "BKGAS-785412",
+    "description": "Gas bill covering March usage. Bakhrabad provides consistent and safe LPG and natural gas supply to residential complexes in multiple zones.",
+    "services": ["LPG Supply", "Commercial Connections", "Emergency Response"]
+  },
+  {
+    "id": 12,
+    "bill_type": "tuition",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXWrHvAN9N1Do1P3KPC8TFdNvk3c58vLShQ&s",
+    "organization": "Scholars Academy",
+    "amount": 9200,
+    "due-date": "2025-04-12T06:57:58.110Z",
+    "account_number": "SCL-998877",
+    "description": "Comprehensive tuition fee including academic curriculum, digital classroom access, sports participation, and monthly assessment reports.",
+    "services": ["Digital Classes", "Sports Training", "Monthly Assessments"]
+  }
+]
