@@ -8,6 +8,9 @@ import OrganizerDetails from '../Pages/OrganizerDetails';
 import Login from '../Pages/Login';
 import Registration from '../Pages/Registration';
 import Profile from '../Pages/Profile';
+import Bills from '../Pages/Bills';
+import Private from '../Provider/Private';
+import BillsDetails from '../Pages/BillsDetails';
 
 const router = createBrowserRouter([
   {
@@ -32,9 +35,34 @@ const router = createBrowserRouter([
         },
         {
           path: "/profile",
-          Component: Profile
+          Component: () => (
+            <Private>
+              <Profile />
+            </Private>
+          )
+        },
+        {
+          path: "/bills",
+          Component: () => (
+            <Private>
+              <Bills />
+            </Private>
+          )
+        },
+        {
+          path: "/bills/:id",
+          Component: () => (
+            <Private>
+              <BillsDetails />
+            </Private>
+          ),
+          loader: async ({ params }) => {
+            const response = await fetch("/Bills.json");
+            const data = await response.json();
+            const bill = data.find((bill) => bill.id === parseInt(params.id));
+            return bill;
         }
-        
+        }  
     ],
   },
 ]);

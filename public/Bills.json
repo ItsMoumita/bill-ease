@@ -8,7 +8,8 @@
     "due-date": "2025-03-22T06:57:58.110Z",
     "account_number": "DES-903221",
     "description": "DESCO provides reliable and uninterrupted electricity to the Dhaka metropolitan area, ensuring residential and commercial needs are met with efficiency. This bill includes consumption for the month of March and any applicable taxes and fees.",
-    "services": ["Residential Power Supply", "Load Management", "Smart Metering"]
+    "services": ["Residential Power Supply", "Load Management", "Smart Metering"],
+     "icon_type": "MdElectricBolt"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "due-date": "2025-03-28T06:57:58.110Z",
     "account_number": "TITAS-112344",
     "description": "Monthly bill for residential gas consumption. Tista Gas provides natural gas for cooking and heating to thousands of households in urban and suburban areas.",
-    "services": ["Household Gas Supply", "Industrial Gas Connection", "Leak Detection Support"]
+    "services": ["Household Gas Supply", "Industrial Gas Connection", "Leak Detection Support"],
+     "icon_type": "GiGasStove"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "due-date": "2025-04-05T06:57:58.110Z",
     "account_number": "BNG-876543",
     "description": "Broadband internet service with up to 10 Mbps speed and unlimited data usage. This plan includes seamless connectivity with 24/7 support.",
-    "services": ["Wireless Broadband", "24/7 Customer Care", "Data Packages"]
+    "services": ["Wireless Broadband", "24/7 Customer Care", "Data Packages"],
+    "icon_type": "MdWifi"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "due-date": "2025-03-25T06:57:58.110Z",
     "account_number": "WASA-443322",
     "description": "Water bill for March based on metered usage. WASA ensures clean and safe drinking water to residential, industrial, and commercial zones.",
-    "services": ["Water Distribution", "Sewage Services", "Water Quality Testing"]
+    "services": ["Water Distribution", "Sewage Services", "Water Quality Testing"],
+     "icon_type": "FaFaucet"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "due-date": "2025-03-30T06:57:58.110Z",
     "account_number": "DBBL-55667788",
     "description": "Credit card bill for March 2025, including monthly transactions, service charges, and minimum due amount. Ensure payment to avoid interest accumulation.",
-    "services": ["Credit Card Services", "Online Banking", "Loan EMI Payments"]
+    "services": ["Credit Card Services", "Online Banking", "Loan EMI Payments"],
+     "icon_type": "FaCreditCard"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "due-date": "2025-04-10T06:57:58.110Z",
     "account_number": "DIS-002145",
     "description": "Monthly tuition fee for Grade 9, covering academic classes, lab use, library access, and extracurricular activities throughout the month of April.",
-    "services": ["Classroom Learning", "Lab Facilities", "Student Counseling"]
+    "services": ["Classroom Learning", "Lab Facilities", "Student Counseling"],
+      "icon_type": "FaSchool"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "due-date": "2025-03-20T06:57:58.110Z",
     "account_number": "GP-459812",
     "description": "Monthly postpaid mobile plan covering local and international calls, SMS packages, and data usage. Includes added VAT and network service fee.",
-    "services": ["Voice & Data Plans", "SIM Replacement", "International Roaming"]
+    "services": ["Voice & Data Plans", "SIM Replacement", "International Roaming"],
+     "icon_type": "MdPhoneIphone"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "due-date": "2025-04-02T06:57:58.110Z",
     "account_number": "LNK3-777888",
     "description": "20 Mbps unlimited internet service for residential users with free installation and router maintenance. Includes peak-hour priority bandwidth.",
-    "services": ["Broadband", "Corporate Connections", "VoIP Services"]
+    "services": ["Broadband", "Corporate Connections", "VoIP Services"],
+     "icon_type": "MdWifi"
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "due-date": "2025-03-18T06:57:58.110Z",
     "account_number": "AKSH-330012",
     "description": "Monthly cable subscription including access to 100+ HD channels, regional content, and sports networks. Supports parental controls and recording features.",
-    "services": ["HD TV Channels", "Set-top Box Support", "Parental Controls"]
+    "services": ["HD TV Channels", "Set-top Box Support", "Parental Controls"],
+      "icon_type": "MdTv"
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "due-date": "2025-04-01T06:57:58.110Z",
     "account_number": "BPDB-222000",
     "description": "Electricity usage charges for March including base tariff, fuel adjustment charges, and meter rent for residential customers in rural areas.",
-    "services": ["Rural Electrification", "Tariff Info", "Complaint Resolution"]
+    "services": ["Rural Electrification", "Tariff Info", "Complaint Resolution"],
+     "icon_type": "MdElectricBolt"
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "due-date": "2025-04-06T06:57:58.110Z",
     "account_number": "BKGAS-785412",
     "description": "Gas bill covering March usage. Bakhrabad provides consistent and safe LPG and natural gas supply to residential complexes in multiple zones.",
-    "services": ["LPG Supply", "Commercial Connections", "Emergency Response"]
+    "services": ["LPG Supply", "Commercial Connections", "Emergency Response"],
+     "icon_type": "GiGasStove"
   },
   {
     "id": 12,
@@ -129,6 +140,7 @@
     "due-date": "2025-04-12T06:57:58.110Z",
     "account_number": "SCL-998877",
     "description": "Comprehensive tuition fee including academic curriculum, digital classroom access, sports participation, and monthly assessment reports.",
-    "services": ["Digital Classes", "Sports Training", "Monthly Assessments"]
+    "services": ["Digital Classes", "Sports Training", "Monthly Assessments"],
+    "icon_type": "FaSchool"
   }
 ]

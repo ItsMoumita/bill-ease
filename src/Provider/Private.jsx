@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { } from 'react';
 import { AuthContext } from './AuthProvider';
+import Loading from '../Components/Loading';
+import { Navigate, useLocation } from 'react-router';
 
 
 const Private = ({ children }) => {
     const { user, loading } = React.useContext(AuthContext);
-
+     const location = useLocation();
     if (loading) {
-        return <div className="flex justify-center items-center h-screen">
-            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-500"></div>
+        return <div >
+            
+              <Loading></Loading>
         </div>
     }
 
-    if (user) {
+    if (user && user?.email) {
         return children;
     }
-    return <div className="flex justify-center items-center h-screen">
-        <h1 className="text-3xl font-bold">Please login to view this page</h1>
-    </div>
+   return <Navigate to='/login' state={{ from: location }} replace></Navigate>
 }
+
+export default Private;

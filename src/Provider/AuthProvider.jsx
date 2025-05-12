@@ -18,6 +18,7 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [balance, setBalance] = useState(10000); // Initial balance
 
   console.log(loading, user);
 
@@ -65,6 +66,8 @@ const googleSignIn = () => {
     loading,
     setLoading,
     updateUser,
+    balance,
+    setBalance,
   };
   return (
     <AuthContext.Provider value={authData}>

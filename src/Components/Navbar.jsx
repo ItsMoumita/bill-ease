@@ -14,11 +14,22 @@ const Navbar = () => {
     }
   };
 
+   const balanceBtn = (
+    <>
+                         <li> <span className="text-white text-sm">Balance: <span className='text-base '>10000</span></span></li>
+                  <li>   <button
+                onClick={handleLogout}
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-2 rounded hover:scale-105 transition"
+              >
+                Signout
+              </button></li>
+    </>
+   )
   return (
     <>
       <nav className="rounded-xl sticky top-0 bg-white/80 backdrop-blur-md shadow-md w-11/12 mx-auto flex items-center justify-between py-4 px-6 md:px-10 z-40">
         {/* Mobile Menu Button (Shown only on mobile) */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center gap-4">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-black focus:outline-none"
@@ -38,6 +49,24 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
+          {
+            user ? (
+              
+              <div className="dropdown dropdown-bottom dropdown-hover">
+                <div tabIndex={0} role="button" className=""> <img
+                  src={user.photoURL}
+                  alt="Profile"
+                  className="w-10 h-10 rounded-full border border-gray-300"
+                /></div>
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                  <li> <span className="text-white font-medium">{user.displayName}</span></li>
+                  <li> <span className="text-white text-xs">{user.email}</span></li>
+                  {balanceBtn}
+            
+                </ul>
+              </div>
+            ):("")
+          }
         </div>
 
         {/* Logo */}
@@ -45,10 +74,10 @@ const Navbar = () => {
 
         {/* Centered Links for Desktop */}
         <div className="hidden md:flex space-x-6 font-bold text-black">
-           <NavLink to="/"><a  className="hover:text-blue-600 hover:scale-105 transition">Home</a></NavLink>
-          <NavLink to="/about"><a  className="hover:text-blue-600 hover:scale-105 transition">About</a></NavLink>
+          <NavLink to="/"><a className="hover:text-blue-600 hover:scale-105 transition">Home</a></NavLink>
+          <NavLink to="/about"><a className="hover:text-blue-600 hover:scale-105 transition">About</a></NavLink>
           <NavLink to="profile"><a className="hover:text-blue-600 hover:scale-105 transition">My Profile</a></NavLink>
-          <NavLink to="bills"><a  className="hover:text-blue-600 hover:scale-105 transition">Bills</a></NavLink>
+          <NavLink to="bills"><a className="hover:text-blue-600 hover:scale-105 transition">Bills</a></NavLink>
         </div>
 
         {/* Buttons for Desktop */}
@@ -68,18 +97,21 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <span className="text-black font-medium">{user.displayName}</span>
-              <button
-                onClick={handleLogout}
-                className="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-100 hover:scale-105 transition"
-              >
-                Logout
-              </button>
-              <img
-                src={user.photoURL}
-                alt="Profile"
-                className="w-10 h-10 rounded-full border border-gray-300"
-              />
+           
+            
+
+              <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                <div tabIndex={0} role="button" className=""> <img
+                  src={user.photoURL}
+                  alt="Profile"
+                  className="w-10 h-10 rounded-full border border-gray-300"
+                /></div>
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                  <li> <span className="text-white font-medium">{user.displayName}</span></li>
+                  <li> <span className="text-white text-xs">{user.email}</span></li>
+                  {balanceBtn}
+                </ul>
+              </div>
             </>
           )}
         </div>
@@ -87,9 +119,8 @@ const Navbar = () => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 ease-in-out md:hidden`}
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          } transition-transform duration-300 ease-in-out md:hidden`}
       >
         <div className="flex justify-end p-4">
           <button
@@ -114,21 +145,21 @@ const Navbar = () => {
         </div>
         <nav className="flex flex-col space-y-4 px-6 font-bold text-black">
           <div>
-            {user? (
-              <div className="flex items-center space-x-2"> 
+            {user ? (
+              <div className="flex items-center space-x-2">
                 <img
-                src={user.photoURL}
-                alt="Profile"
-                className="w-10 h-10 rounded-full border border-gray-300"
-              />
-               <p className="text-black font-medium">{user.displayName}</p>
+                  src={user.photoURL}
+                  alt="Profile"
+                  className="w-10 h-10 rounded-full border border-gray-300"
+                />
+                <p className="text-black font-medium">{user.displayName}</p>
               </div>
-          ):("")}
+            ) : ("")}
           </div>
-         <NavLink to="/"><a  className="hover:text-blue-600 hover:scale-105 transition">Home</a></NavLink>
-          <NavLink to="/about"><a  className="hover:text-blue-600 hover:scale-105 transition">About</a></NavLink>
-          <NavLink to="profile"><a className="hover:text-blue-600 hover:scale-105 transition">My Profile</a></NavLink>
-          <NavLink to="bills"><a  className="hover:text-blue-600 hover:scale-105 transition">Bills</a></NavLink>
+          <NavLink to="/"><a className="hover:text-blue-600 hover:scale-105 transition">Home</a></NavLink>
+          <NavLink to="/about"><a className="hover:text-blue-600 hover:scale-105 transition">About</a></NavLink>
+          <NavLink to="/profile"><a className="hover:text-blue-600 hover:scale-105 transition">My Profile</a></NavLink>
+          <NavLink to="/bills"><a className="hover:text-blue-600 hover:scale-105 transition">Bills</a></NavLink>
           {!user ? (
             <>
               <Link to="/registration">
@@ -144,14 +175,14 @@ const Navbar = () => {
             </>
           ) : (
             <>
-             
+
               <button
                 onClick={handleLogout}
                 className="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-100 hover:scale-105 transition"
               >
-                Logout
+                Signout
               </button>
-             
+
             </>
           )}
         </nav>
