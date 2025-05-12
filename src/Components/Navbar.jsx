@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, balance } = useContext(AuthContext); // Added balance from AuthContext
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
 
    const balanceBtn = (
     <>
-                         <li> <span className="text-white text-sm">Balance: <span className='text-base '>10000</span></span></li>
+                         <li> <span className="text-white text-sm">Balance: <span className='text-base '>{balance}</span></span></li>
                   <li>   <button
                 onClick={handleLogout}
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-2 rounded hover:scale-105 transition"

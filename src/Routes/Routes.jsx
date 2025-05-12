@@ -11,11 +11,13 @@ import Profile from '../Pages/Profile';
 import Bills from '../Pages/Bills';
 import Private from '../Provider/Private';
 import BillsDetails from '../Pages/BillsDetails';
+import Error from '../Pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error></Error>,
     children:[
         {
             path: "/",
