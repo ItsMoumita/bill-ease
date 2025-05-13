@@ -39,9 +39,9 @@ const BillsDetails = () => {
 
   return (
     <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col justify-center bg-gradient-to-r from-blue-500 to-cyan-500  min-h-[71vh] px-4 " data-aos="fade-up">
-         {/* <Helmet>
+         <Helmet>
                         <title>BillEase | Bills-details </title>
-                    </Helmet> */}
+                    </Helmet>
 
         <div className="w-full max-w-4xl  mx-auto my-10 flex flex-col md:flex-row items-center  md:items-start gap-10 bg-white p-6 md:py-18 rounded-xl shadow-md">
       

@@ -6,9 +6,9 @@ const AboutPage = () => {
 
   return (
     <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-500  min-h-[71vh]" data-aos="fade-up">
-         {/* <Helmet>
+         <Helmet>
                         <title>BillEase | About </title>
-                    </Helmet> */}
+                    </Helmet>
          <div className=" bg-gray-50 py-12 px-6 md:px-20 rounded-lg">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-blue-700 mb-6">About BillEase</h1>

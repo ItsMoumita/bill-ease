@@ -14,9 +14,9 @@ const Home = () => {
 
     return (
         <div>
-            {/* <Helmet>
+            <Helmet>
                 <title>BillEase | Home </title>
-            </Helmet> */}
+            </Helmet>
             <Hero></Hero>
             <Organizers></Organizers>
             <BillPaymentOffers></BillPaymentOffers>

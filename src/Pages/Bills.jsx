@@ -34,9 +34,9 @@ const Bills = () => {
 
     return (
         <div className="w-11/12 mx-auto my-10 grid grid-cols-1 gap-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl p-6" data-aos="fade-up">
-            {/* <Helmet>
+            <Helmet>
                 <title>BillEase | Bills </title>
-            </Helmet> */}
+            </Helmet>
             <h1 className='text-4xl font-bold text-white text-center mb-6'>My Bills</h1>
 
             <div className="mb-4">
