@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCbtj7bjyxS3FiYWKxxTzr5mgNx4djgoYU",
-  authDomain: "bill-payment-1fb7a.firebaseapp.com",
-  projectId: "bill-payment-1fb7a",
-  storageBucket: "bill-payment-1fb7a.firebasestorage.app",
-  messagingSenderId: "505606606127",
-  appId: "1:505606606127:web:2c624c33c2a47578afe5da"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
