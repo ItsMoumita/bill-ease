@@ -1,6 +1,6 @@
 # 💳 BillEase - Bill Management Web Application
 
-**Live Site:** [https://billease.netlify.app](https://billease.netlify.app)
+**Live Site:** [https://bill-ease-moumita.netlify.app/](https://bill-ease-moumita.netlify.app/)
 
 BillEase is a modern and intuitive Single Page Application (SPA) built to simplify your utility bill payments. It allows users to securely manage and pay bills like electricity, gas, water, tuition, and more — all from one place.
 

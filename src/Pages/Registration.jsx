@@ -55,7 +55,7 @@ const Registration = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-300 px-4 mt-12" data-aos="fade-up">
+        <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-cyan-500  min-h-[71vh]" data-aos="fade-up">
              <Helmet>
                             <title>BillEase | Registration </title>
                         </Helmet>
