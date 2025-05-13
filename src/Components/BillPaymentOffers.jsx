@@ -31,7 +31,7 @@ const BillPaymentOffers = () => {
   ];
 
   return (
-    <div className="w-11/12 mx-auto bg-gray-50 py-6 px-4 mt-10 rounded-xl shadow">
+    <div className="w-11/12 mx-auto bg-gray-50 py-6 px-4 mt-10 rounded-xl shadow" data-aos="fade-up">
       <h2 className="text-2xl md:text-4xl font-bold text-center text-blue-600 mb-12">🔥 Offers on Bill Payments</h2>
       <Marquee pauseOnHover gradient={false} speed={60}>
         {offers.map((offer) => (

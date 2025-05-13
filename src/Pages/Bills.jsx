@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, useLoaderData, useNavigate } from 'react-router-dom';
+import Loading from '../Components/Loading';
 
 const Bills = () => {
-    const [bills, setBills] = useState([]);
-    const [paidBills, setPaidBills] = useState([]); // Track paid bills
-    const [filter, setFilter] = useState(''); // Track selected bill type
-    const navigate = useNavigate();
-    const location = useLocation();
+    const data = useLoaderData();
+    const [bills] = useState(data);
+    const [paidBills, setPaidBills] = useState(() => {
+        // Retrieve paid bills from localStorage on initial load
+        const storedPaidBills = localStorage.getItem('paidBills');
+        return storedPaidBills ? JSON.parse(storedPaidBills) : [];
+    });
+    const [filter, setFilter] = useState('');
 
-    useEffect(() => {
-        fetch('/Bills.json')
-            .then((res) => res.json())
-            .then((data) => setBills(data))
-            .catch((error) => console.error("Error loading bills:", error));
-    }, []);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (location.state?.paidBillId && !paidBills.includes(location.state.paidBillId)) {
-            setPaidBills((prev) => [...prev, location.state.paidBillId]);
+            const updatedPaidBills = [...paidBills, location.state.paidBillId];
+            setPaidBills(updatedPaidBills);
+            localStorage.setItem('paidBills', JSON.stringify(updatedPaidBills)); // Persist to localStorage
         }
     }, [location.state, paidBills]);
 
     const handlePay = (id) => {
-        if (paidBills.includes(id)) {
-            alert('This bill has already been paid.');
-
-            return;
-        }
         navigate(`/bills/${id}`);
     };
 
@@ -36,10 +33,10 @@ const Bills = () => {
         : bills;
 
     return (
-        <div className="w-11/12 mx-auto my-10 grid grid-cols-1 gap-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl p-6">
-            <Helmet>
+        <div className="w-11/12 mx-auto my-10 grid grid-cols-1 gap-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl p-6" data-aos="fade-up">
+            {/* <Helmet>
                 <title>BillEase | Bills </title>
-            </Helmet>
+            </Helmet> */}
             <h1 className='text-4xl font-bold text-white text-center mb-6'>My Bills</h1>
 
             <div className="mb-4">
@@ -82,16 +79,7 @@ const Bills = () => {
 
                     <div className="flex items-center gap-4">
                         {paidBills.includes(bill.id) ? (
-                            <div className='flex items-center gap-4'>
-                                <button
-                                    onClick={() => handlePay(bill.id)}
-                                    className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xl px-12 py-2 rounded hover:scale-105 transition"
-                                >
-                                    Pay
-                                </button>
-                                <span className="text-green-500 text-2xl">✅</span>
-                            </div>
-
+                            <span className="text-green-500 text-2xl">✅</span>
                         ) : (
                             <button
                                 onClick={() => handlePay(bill.id)}

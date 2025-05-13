@@ -19,9 +19,9 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [balance, setBalance] = useState(10000); // Initial balance
+  const [balance, setBalance] = useState(10000); 
 
-  console.log(loading, user);
+  
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   if (loading) {
-    return <Loading></Loading> // Show a loading indicator while checking auth state
+    return <Loading></Loading> 
   }
 
   const googleProvider = new GoogleAuthProvider();

@@ -74,10 +74,10 @@ const Navbar = () => {
 
         {/* Centered Links for Desktop */}
         <div className="hidden md:flex space-x-6 font-bold text-black">
-          <NavLink to="/"><a className="hover:text-blue-600 hover:scale-105 transition">Home</a></NavLink>
-          <NavLink to="/about"><a className="hover:text-blue-600 hover:scale-105 transition">About</a></NavLink>
-          <NavLink to="profile"><a className="hover:text-blue-600 hover:scale-105 transition">My Profile</a></NavLink>
-          <NavLink to="bills"><a className="hover:text-blue-600 hover:scale-105 transition">Bills</a></NavLink>
+          <NavLink to="/" className="hover:text-blue-600 hover:scale-105 transition">Home</NavLink>
+          <NavLink to="/about" className="hover:text-blue-600 hover:scale-105 transition">About</NavLink>
+          <NavLink to="profile" className="hover:text-blue-600 hover:scale-105 transition">My Profile</NavLink>
+          <NavLink to="bills" className="hover:text-blue-600 hover:scale-105 transition">Bills</NavLink>
         </div>
 
         {/* Buttons for Desktop */}
@@ -156,10 +156,10 @@ const Navbar = () => {
               </div>
             ) : ("")}
           </div>
-          <NavLink to="/"><a className="hover:text-blue-600 hover:scale-105 transition">Home</a></NavLink>
-          <NavLink to="/about"><a className="hover:text-blue-600 hover:scale-105 transition">About</a></NavLink>
-          <NavLink to="/profile"><a className="hover:text-blue-600 hover:scale-105 transition">My Profile</a></NavLink>
-          <NavLink to="/bills"><a className="hover:text-blue-600 hover:scale-105 transition">Bills</a></NavLink>
+          <NavLink to="/" className="hover:text-blue-600 hover:scale-105 transition">Home</NavLink>
+          <NavLink to="/about" className="hover:text-blue-600 hover:scale-105 transition">About</NavLink>
+          <NavLink to="/profile" className="hover:text-blue-600 hover:scale-105 transition">My Profile</NavLink>
+          <NavLink to="/bills" className="hover:text-blue-600 hover:scale-105 transition">Bills</NavLink>
           {!user ? (
             <>
               <Link to="/registration">

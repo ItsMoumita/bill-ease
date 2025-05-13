@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 backdrop-blur-md text-gray-100 py-10 ">
+    <footer className="bg-blue-900 backdrop-blur-md text-gray-100 py-10 " data-aos="fade-up">
       <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left gap-6">
         
         {/* Brand Info */}
@@ -15,9 +15,9 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="space-y-2 flex flex-col md:flex-row gap-4">
-          <Link to="/"><a  className="block hover:text-blue-600">Home </a></Link>
-          <Link to ="/about"><a  className="block hover:text-blue-600">About </a></Link>
-          <Link to="/bills"><a  className="block hover:text-blue-600">Bills </a></Link>
+          <Link to="/" className="block hover:text-blue-600">Home</Link>
+          <Link to="/about" className="block hover:text-blue-600">About</Link>
+          <Link to="/bills" className="block hover:text-blue-600">Bills</Link>
         </div>
 
         {/* Social Media */}

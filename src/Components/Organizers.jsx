@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ corrected import for router
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,7 @@ const Organizers = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/Bills.json')
+    fetch('/bills.json')
       .then((res) => res.json())
       .then((data) => setBills(data))
       .catch((error) => console.error("Error loading bills:", error));
@@ -22,26 +22,26 @@ const Organizers = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: '10px', // 👈 spacing between cards
+    centerPadding: '10px',
     arrows: true,
     responsive: [
       {
-        breakpoint: 1280, // lg
+        breakpoint: 1280,
         settings: { slidesToShow: 2, centerMode: true, centerPadding: '40px' }
       },
       {
-        breakpoint: 1024, // md
+        breakpoint: 1024,
         settings: { slidesToShow: 2, centerMode: true, centerPadding: '30px' }
       },
       {
-        breakpoint: 768, // sm
+        breakpoint: 768,
         settings: { slidesToShow: 1, centerMode: true, centerPadding: '20px' }
       }
     ],
     nextArrow: <div className="slick-next slick-arrow" style={{ right: '10px' }} />,
     prevArrow: <div className="slick-prev slick-arrow" style={{ left: '10px' }} />,
-    beforeChange: () => {}, // Prevents passing currentSlide to DOM
-    afterChange: () => {} // Prevents passing slideCount to DOM
+    beforeChange: () => {},
+    afterChange: () => {}
   };
 
   return (

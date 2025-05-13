@@ -13,6 +13,7 @@ import Private from '../Provider/Private';
 import BillsDetails from '../Pages/BillsDetails';
 import Error from '../Pages/Error';
 import AboutPage from '../Pages/AboutPage';
+import Loading from '../Components/Loading';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,8 @@ const router = createBrowserRouter([
         },
         {
           path: "/about",
-          Component: AboutPage
+          Component: AboutPage,
+          HydrateFallbackElement: <Loading />,
         },
         {
           path: "/organizer/:id",
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
               <OrganizerDetails />
             </Private>
           ),
+          HydrateFallbackElement: <Loading />,
         },
         {
           path: "/login",
@@ -42,7 +45,8 @@ const router = createBrowserRouter([
         },
         {
           path: "/registration",
-          Component: Registration
+          Component: Registration,
+          HydrateFallbackElement: <Loading />,
         },
         {
           path: "/profile",
@@ -50,7 +54,8 @@ const router = createBrowserRouter([
             <Private>
               <Profile />
             </Private>
-          )
+          ),
+          HydrateFallbackElement: <Loading />,
         },
         {
           path: "/bills",
@@ -58,7 +63,9 @@ const router = createBrowserRouter([
             <Private>
               <Bills />
             </Private>
-          )
+          ),
+           loader: async () => fetch("/bills.json"),
+          HydrateFallbackElement: <Loading />,
         },
         {
           path: "/bills/:id",
@@ -68,11 +75,12 @@ const router = createBrowserRouter([
             </Private>
           ),
           loader: async ({ params }) => {
-            const response = await fetch("/Bills.json");
+            const response = await fetch("/bills.json");
             const data = await response.json();
             const bill = data.find((bill) => bill.id === parseInt(params.id));
             return bill;
-        }
+        },
+        HydrateFallbackElement: <Loading />,
         }  
     ],
   },

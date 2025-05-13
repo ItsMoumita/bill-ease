@@ -32,7 +32,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="w-11/12  mx-auto py-12 px-4 mt-10 bg-white rounded-2xl shadow mb-12">
+    <div className="w-11/12  mx-auto py-12 px-4 mt-10 bg-white rounded-2xl shadow mb-12" data-aos="fade-up">
       <h2 className="text-2xl md:text-4xl font-bold text-center text-blue-700 mb-10">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {faqData.map((item, index) => (

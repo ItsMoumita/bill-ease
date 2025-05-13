@@ -8,15 +8,12 @@ input::placeholder {
 
 input {
   color: gray;
-  /* outline: none; */
-}
-button{
-  cursor: pointer;
-}
-.active{
-  color:rgba(0, 47, 255, 0.897)
 }
 
-/* input:focus {
-  outline: 1px solid blue;
-} */
+button {
+  cursor: pointer;
+}
+
+.active {
+  color: rgba(0, 47, 255, 0.897);
+}
