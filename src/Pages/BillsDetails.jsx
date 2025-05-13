@@ -28,12 +28,14 @@ const BillsDetails = () => {
 
   const handlePayBill = () => {
     if (balance >= bill.amount) {
-      setBalance(balance - bill.amount);
+      const updatedBalance = balance - bill.amount;
+      setBalance(updatedBalance);
+      localStorage.setItem("balance", updatedBalance); // Update localStorage
       toast.success('Bill paid successfully!');
       navigate('/bills', { state: { paidBillId: bill.id } }); // Pass the paid bill ID to the Bills page
     } else {
       toast.error('Insufficient balance to pay the bill.');
-       navigate('/bills');
+      navigate('/bills');
     }
   };
 

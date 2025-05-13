@@ -62,11 +62,11 @@ const Bills = () => {
                         <img
                             src={bill.icon}
                             alt={bill.bill_type}
-                            className="w-46 h-46 object-contain"
+                            className="w-32 h-32 md:w-46 md:h-46 object-contain"
                         />
                     </div>
 
-                    <div className="flex-1 flex flex-col md:flex-row justify-between items-center px-4 text-sm md:text-2xl text-gray-700">
+                    <div className="flex-1 flex flex-col lg:flex-row justify-between items-center px-4 text-sm xl:text-2xl text-gray-700">
                         <div className="flex flex-col">
                             <span className="text-base font-bold text-gray-800">{bill.organization}</span>
                             <span className="italic text-gray-600">{bill.bill_type}</span>

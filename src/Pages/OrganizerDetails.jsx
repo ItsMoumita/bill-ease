@@ -8,7 +8,7 @@ const OrganizerDetails = () => {
   const [bill, setBill] = useState(null);
 
   useEffect(() => {
-    fetch('/Bills.json')
+    fetch('/bills.json')
       .then(res => res.json())
       .then(data => {
         const selected = data.find(item => item.id === parseInt(id));
@@ -19,15 +19,18 @@ const OrganizerDetails = () => {
         }
       });
   }, [id, navigate]);
-
   if (!bill) {
-    return <div className="text-center mt-10 text-xl text-gray-700">Loading details...</div>;
-  }
-
+    return (
+      <div className="flex justify-center items-center h-screen">
+      <span className="loading loading-ball loading-md"></span>
+      </div>
+    );
+  }                     
+ 
   return (
-   <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col min-h-[71vh] bg-gradient-to-r from-blue-500 to-cyan-500" data-aos="fade-up">
+   <div className="w-11/12 mx-auto rounded-xl mt-9 mb-9 flex flex-col min-h-[71vh] bg-gradient-to-r from-blue-500 to-cyan-500">
      <Helmet>
-                    <title>BillEase | {bill.bill_type} </title>
+                    <title>BillEase | Bill Details </title>
                 </Helmet>
         <div className="max-w-4xl md:h-[67vh] mx-auto mt-10  shadow-lg rounded-2xl p-6 w-11/12 mb-9 bg-white">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">

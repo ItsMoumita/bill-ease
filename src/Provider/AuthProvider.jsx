@@ -21,7 +21,18 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [balance, setBalance] = useState(10000); 
 
-  
+  useEffect(() => {
+    // Retrieve balance from localStorage on initial load
+    const storedBalance = localStorage.getItem("balance");
+    if (storedBalance) {
+      setBalance(Number(storedBalance));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save balance to localStorage whenever it changes
+    localStorage.setItem("balance", balance);
+  }, [balance]);
 
   const createUser = (email, password) => {
     setLoading(true);
