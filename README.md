@@ -16,7 +16,7 @@ BillEase aims to bring all your bills under one dashboard, where you can pay the
 
 - 🔐 **Authentication with Firebase**
   - Email & Password login/register
-  - Google OAuth Login
+  - Google Auth Login
   - Protected routes (Bills, Profile, etc.)
   - Firebase environment variables secured via `.env`
 
